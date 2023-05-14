@@ -31,7 +31,9 @@ class _MyHomePageState extends State<MyHomePage> {
           title: const Text('QRScanner'),
         ),
         body: MobileScanner(
-          onDetect: (Barcode) {},
+          onDetect: (barcodes) {
+            debugPrint('Barcode Found!' + 'barcode.rawValue!');
+          },
         ));
   }
 }
